@@ -1,8 +1,6 @@
 <template>
   <div>
-    <Header />
-    <p>{{ name }}</p>
-    <p>{{ age }}</p>
+    <Header :students="students"/>
     <Footer />
   </div>
 </template>
@@ -13,8 +11,7 @@ import Footer from './Components/Header_Footer/Footer.vue';
 export default {
   data(){
     return {
-      name: 'Rabiul Hasan',
-      age: 13
+      students: ['Rabiul', 'Munna', 'Arif', 'Ramjan']
     }
   },
   components:{
