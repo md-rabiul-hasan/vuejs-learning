@@ -1,20 +1,10 @@
 new Vue({
     el: '#app',
     data:{
-        title: 'Rabiul Hasan',
-        isTrue: false,
-        myArray : ['Munna', 'Arif'],
-        myObj: {
-            name: 'Arif',
-            age: 20
-        }
+        src: 'https://picsum.photos/200/300?grayscale',
+        alt: 'animal image',
+        link: 'https://rabiul.xyz'
     },
     methods: {
-        myFunction: function(){
-            return "ooo";
-        },
-        getTitle(){
-            return this.title;
-        }
     },
 })

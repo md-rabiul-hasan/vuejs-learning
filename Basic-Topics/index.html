@@ -10,12 +10,8 @@
 </head>
 <body>
     <div id="app">
-        <p>{{ title }}</p>
-        <p>{{ isTrue }}</p>
-        <p>{{ myArray[0] }}</p>
-        <p>{{ myObj.name }}</p>
-        <p>{{ myFunction() }}</p>
-        <p>{{ getTitle() }}</p>
+        <img v-bind:src="src" v-bind:alt="alt" />
+        <a target="_blank" v-bind:href="link">rabiul.xyz</a>
     </div>    
     <!-- Import App.js File -->
     <script src="app.js"></script>
