@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <form>
+        <form @submit.prevent="submitForm">
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                     <h1>From Handeling</h1>
@@ -89,22 +89,25 @@
                     <label for="priority">Priority</label>
                     <select
                             id="priority"
-                            class="form-control">
-                        <option></option>
+                            class="form-control"
+                            v-model="selected">
+                        <option v-for="(sel,index) in selectValue" :key="index">
+                          {{ sel }}
+                        </option>
                     </select>
                 </div>
             </div>
             <hr>
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-                    <button
+                    <button type="submit" 
                             class="btn btn-primary">Submit!
                     </button>
                 </div>
             </div>
         </form>
         <hr>
-        <div class="row">
+        <div class="row" v-if="isSubmitted">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -122,7 +125,7 @@
                             </li>
                         </ul>
                         <p>Gender: {{ gender }}</p>
-                        <p>Priority:</p>
+                        <p>Priority: {{ selected }}</p>
                         <p>Switched:</p>
                     </div>
                 </div>
@@ -142,9 +145,17 @@
             message: ''
           },
           checkboxList:[],
-          gender:''
+          gender:'',
+          selected: 'Rabiul',
+          selectValue: ['Rabiul', 'Munaa','Shuvo'],
+          isSubmitted: false
         }
-      }
+      },
+      methods: {
+        submitForm(){
+          this.isSubmitted = true;
+        }
+      },
     }
 </script>
 
