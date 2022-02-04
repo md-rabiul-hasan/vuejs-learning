@@ -10,15 +10,12 @@
 </head>
 <body>
     <div id="app">
-        <form v-on:submit.prevent="handelForm">
-            <label for="">First Name</label>
-            <input type="text" v-model="formData.firstName">
-            <br>
-            <label for="">Last Name</label>
-            <input type="text" v-model="formData.lastName">
-            <br>
-            <button type="submit">Submit</button>
-        </form>
+       <button type="button" v-on:click="a++" >Add A</button>
+       <button type="button" v-on:click="b++">Add B</button>
+       <p>{{ a }}</p>
+       <p>{{ b }}</p>
+       <p>Salary + A = {{ addToA }}</p>
+       <p>Salary + B = {{ addToB }}</p>
     </div>    
     <!-- Import App.js File -->
     <script src="app.js"></script>

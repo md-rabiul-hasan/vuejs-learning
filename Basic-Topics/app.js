@@ -1,17 +1,18 @@
 new Vue({
     el: '#app',
     data:{
-       formData:{
-           firstName: '',
-           lastName: ''
-       }
+      a: 0,
+      b: 0,
+      salary: 100
     },
-    methods: {
-        updateMobileNumber(event){
-            console.log(event);
+    computed:{
+        addToA(){
+            console.log('A');
+            return this.a + this.salary;
         },
-        handelForm(){
-           console.log(this.formData)
+        addToB(){
+            console.log('B');
+            return this.b + this.salary;
         }
     }
 })
