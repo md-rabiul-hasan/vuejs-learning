@@ -10,10 +10,9 @@
 </head>
 <body>
     <div id="app">
-        <img v-bind:src="src" v-bind:alt="alt" />
-        <a target="_blank" v-bind:href="link">rabiul.xyz</a>
-        <p v-text="mytext"></p>
-        <p v-html="myHtml"></p>
+        <p v-if="userAge >= allowedAge">You are adult</p>
+        <p v-else-if="checkRabiulAccess()">Rabiul is super</p>
+        <p v-else>You are not available to see this video</p>
     </div>    
     <!-- Import App.js File -->
     <script src="app.js"></script>

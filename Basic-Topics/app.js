@@ -1,12 +1,13 @@
 new Vue({
     el: '#app',
     data:{
-        src: 'https://picsum.photos/200/300?grayscale',
-        alt: 'animal image',
-        link: 'https://rabiul.xyz',
-        mytext: 'Rabiul Go...',
-        myHtml: '<strong>Bagooo<strong>'
+        user: 'nazrul',
+        userAge: 16,
+        allowedAge: 18
     },
     methods: {
+        checkRabiulAccess(){
+            return this.user === 'rabiul' ? true : false
+        }
     },
 })
