@@ -4,19 +4,32 @@
         <ul>
             <li v-for="(student,index) in students" :key="index">
                 {{ student }}
-            </li>
+            </li>            
         </ul>
+        <p>{{ firstName }}</p>
+        <p>{{ lastName }}</p>
+        <input type="text" v-model="newname">
+        <button @click="updatedName">Click</button>
     </div>
 </template>
 
 <script>
 export default {
    props:{
-       students:{
-           type: Array
+       students: Array,
+       firstName: String,
+       lastName: String
+   },
+   data(){
+       return {
+           newname: 'Rabiul'
        }
-   }
-    
+   },
+   methods:{
+       updatedName(){
+           this.$emit('updateFirstName', this.newname)
+       }
+   }    
 }
 </script>
 

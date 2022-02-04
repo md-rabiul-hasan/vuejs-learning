@@ -1,6 +1,11 @@
 <template>
   <div>
-    <Header :students="students"/>
+    <Header 
+      :students="students"
+      :firstName="firstName"
+      :lastName="lastName"
+      @updateFirstName="firstName = $event"
+    />
     <Footer />
   </div>
 </template>
@@ -11,7 +16,9 @@ import Footer from './Components/Header_Footer/Footer.vue';
 export default {
   data(){
     return {
-      students: ['Rabiul', 'Munna', 'Arif', 'Ramjan']
+      students: ['Rabiul', 'Munna', 'Arif', 'Ramjan'],
+      firstName: 'Rabiul',
+      lastName: 'Hasan'
     }
   },
   components:{
