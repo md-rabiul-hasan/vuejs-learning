@@ -1,18 +1,11 @@
+var temp = `<h2>My Name is {{ name }}</h2>`
 var app1 = new Vue({
-    el: '#app1',
     data:{
-
+        name: 'Rabiul Hasan'
     },
-    methods: {
-        changeInstance(){
-            app2.value = "Nazrul Islam"
-        }
-    },
+    template: temp
 });
 
-var app2 = new Vue({
-    el: '#app2',
-    data:{
-        value: 'Rabiul Hasan'
-    }
-});
+setTimeout(() => {
+    app1.$mount('#app');
+}, 2000);
