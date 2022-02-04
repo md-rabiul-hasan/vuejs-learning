@@ -3,16 +3,7 @@ new Vue({
     data:{
       a: 0,
       b: 0,
+      link: 'https://picsum.photos/200/300?grayscale',
       salary: 100
-    },
-    computed:{
-        addToA(){
-            console.log('A');
-            return this.a + this.salary;
-        },
-        addToB(){
-            console.log('B');
-            return this.b + this.salary;
-        }
     }
 })

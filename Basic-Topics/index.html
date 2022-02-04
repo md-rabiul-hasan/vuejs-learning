@@ -10,12 +10,13 @@
 </head>
 <body>
     <div id="app">
-       <button type="button" v-on:click="a++" >Add A</button>
-       <button type="button" v-on:click="b++">Add B</button>
-       <p>{{ a }}</p>
-       <p>{{ b }}</p>
-       <p>Salary + A = {{ addToA }}</p>
-       <p>Salary + B = {{ addToB }}</p>
+      <button @click="a++">Increment</button>
+      <p>{{ a }}</p>
+
+      <img :src="link">
+
+      <input type="text" v-model="salary">
+
     </div>    
     <!-- Import App.js File -->
     <script src="app.js"></script>
