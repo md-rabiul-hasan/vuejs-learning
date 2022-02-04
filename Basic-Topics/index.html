@@ -11,7 +11,12 @@
 <body>
     <div id="app">
         <form v-on:submit.prevent="handelForm">
-            <input type="text" placeholder="mobile number" @change="updateMobileNumber($event)">
+            <label for="">First Name</label>
+            <input type="text" v-model="formData.firstName">
+            <br>
+            <label for="">Last Name</label>
+            <input type="text" v-model="formData.lastName">
+            <br>
             <button type="submit">Submit</button>
         </form>
     </div>    
