@@ -1,11 +1,13 @@
 new Vue({
     el: '#app',
     data:{
-        cars: ['BMW', 'Ford', 'Marcedies'],
-        user:{
-            name: 'Rabiul',
-            age: 24,
-            earning: 35000
+       name: 'Rabiul Hasan'
+    },
+    methods: {
+        changeName(){
+            setTimeout(() => {
+                this.name = 'Nazrul Islam'
+            }, 2000);
         }
     }
 })

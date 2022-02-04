@@ -10,13 +10,9 @@
 </head>
 <body>
     <div id="app">
-        <p v-for="(car,index) in cars">
-            {{ index}} => {{ car }}
-        </p>
-        <hr>
-        <p v-for="(u,index,key) in user">
-            index => {{index}} >> key => {{key}} >> value {{ u }} >>
-        </p>
+        <h4>{{ name }}</h4>
+        <h4 v-once>{{ name }}</h4>
+        {{ changeName() }}
     </div>    
     <!-- Import App.js File -->
     <script src="app.js"></script>
