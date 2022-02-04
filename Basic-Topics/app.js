@@ -1,13 +1,17 @@
 new Vue({
     el: '#app',
     data:{
-       name: 'Rabiul Hasan'
+       name: '',
+       x: 0,
+       y: 0,
     },
     methods: {
-        changeName(){
-            setTimeout(() => {
-                this.name = 'Nazrul Islam'
-            }, 2000);
+        getName(){
+            return this.name = 'Rabiul Hasan';
+        },
+        findMouserMove(event){
+            this.x = event.clientX;
+            this.y = event.clientY;
         }
     }
 })

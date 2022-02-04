@@ -10,11 +10,23 @@
 </head>
 <body>
     <div id="app">
-        <h4>{{ name }}</h4>
-        <h4 v-once>{{ name }}</h4>
-        {{ changeName() }}
+        <p>{{ name }}</p>
+        <button v-on:click="getName">click me</button>
+
+        <div v-on:mousemove="findMouserMove" class="box">
+            Hover Me
+        </div>
+        <p>{{x}}</p>
+        <p>{{y}}</p>
     </div>    
     <!-- Import App.js File -->
     <script src="app.js"></script>
+    <style>
+        .box{
+            background-color: red;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
 </body>
 </html>
