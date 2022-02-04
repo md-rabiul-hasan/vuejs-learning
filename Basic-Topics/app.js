@@ -1,9 +1,18 @@
-new Vue({
-    el: '#app',
+var app1 = new Vue({
+    el: '#app1',
     data:{
-      a: 0,
-      b: 0,
-      link: 'https://picsum.photos/200/300?grayscale',
-      salary: 100
+
+    },
+    methods: {
+        changeInstance(){
+            app2.value = "Nazrul Islam"
+        }
+    },
+});
+
+var app2 = new Vue({
+    el: '#app2',
+    data:{
+        value: 'Rabiul Hasan'
     }
-})
+});
