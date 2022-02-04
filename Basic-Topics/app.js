@@ -1,11 +1,12 @@
-var temp = `<h2>My Name is {{ name }}</h2>`
-var app1 = new Vue({
-    data:{
-        name: 'Rabiul Hasan'
+Vue.component('name', {
+    data(){
+        return {
+            name: 'Rabiul Hasan'
+        }
     },
-    template: temp
+    template: `<h4>My name is {{ name }}</h4>`
 });
 
-setTimeout(() => {
-    app1.$mount('#app');
-}, 2000);
+new Vue({
+    el: '#app'
+})
