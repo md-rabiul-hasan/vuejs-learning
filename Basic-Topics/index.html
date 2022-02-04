@@ -10,8 +10,13 @@
 </head>
 <body>
     <div id="app">
-        <p v-show="!checkRabiulAccess()">Nazrul</p>
-        <p v-show="checkRabiulAccess()">Rabiul</p>
+        <p v-for="(car,index) in cars">
+            {{ index}} => {{ car }}
+        </p>
+        <hr>
+        <p v-for="(u,index,key) in user">
+            index => {{index}} >> key => {{key}} >> value {{ u }} >>
+        </p>
     </div>    
     <!-- Import App.js File -->
     <script src="app.js"></script>

@@ -1,13 +1,11 @@
 new Vue({
     el: '#app',
     data:{
-        user: 'rabiul',
-        userAge: 16,
-        allowedAge: 18
-    },
-    methods: {
-        checkRabiulAccess(){
-            return this.user === 'rabiul' ? true : false
+        cars: ['BMW', 'Ford', 'Marcedies'],
+        user:{
+            name: 'Rabiul',
+            age: 24,
+            earning: 35000
         }
-    },
+    }
 })
