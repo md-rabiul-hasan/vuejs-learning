@@ -10,9 +10,8 @@
 </head>
 <body>
     <div id="app">
-        <p v-if="userAge >= allowedAge">You are adult</p>
-        <p v-else-if="checkRabiulAccess()">Rabiul is super</p>
-        <p v-else>You are not available to see this video</p>
+        <p v-show="!checkRabiulAccess()">Nazrul</p>
+        <p v-show="checkRabiulAccess()">Rabiul</p>
     </div>    
     <!-- Import App.js File -->
     <script src="app.js"></script>

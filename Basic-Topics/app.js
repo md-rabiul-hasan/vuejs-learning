@@ -1,7 +1,7 @@
 new Vue({
     el: '#app',
     data:{
-        user: 'nazrul',
+        user: 'rabiul',
         userAge: 16,
         allowedAge: 18
     },
