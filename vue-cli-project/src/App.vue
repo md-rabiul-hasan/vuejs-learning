@@ -1,18 +1,6 @@
 <template>
   <div>
-    <UserListSlot>
-      <template v-slot:studentList>
-        <ul>
-          <li v-for="(student, index) in students" :key="index">
-            {{ student }}
-          </li>
-        </ul>
-      </template>
-      <template v-slot:loader>
-      </template>
-
-      
-    </UserListSlot>
+    <UserListSlot></UserListSlot>
   </div>
 </template>
 
