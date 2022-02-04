@@ -7,9 +7,14 @@ new Vue({
         myObj: {
             name: 'Arif',
             age: 20
-        },
-        myFunction : () => {
-            return "Yapp, bro..."
         }
-    }
+    },
+    methods: {
+        myFunction: function(){
+            return "ooo";
+        },
+        getTitle(){
+            return this.title;
+        }
+    },
 })
