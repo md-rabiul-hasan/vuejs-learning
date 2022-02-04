@@ -52,13 +52,15 @@
                             <input
                                     type="checkbox"
                                     id="sendmail"
-                                    value="SendMail"> Send Mail
+                                    value="SendMail"
+                                    v-model="checkboxList"> Send Mail
                         </label>
                         <label for="sendInfomail">
                             <input
                                     type="checkbox"
                                     id="sendInfomail"
-                                    value="SendInfoMail"> Send Infomail
+                                    value="SendInfoMail"
+                                    v-model="checkboxList"> Send Infomail
                         </label>
                     </div>
 
@@ -70,13 +72,15 @@
                         <input
                                 type="radio"
                                 id="male"
-                                value="Male"> Male
+                                value="Male"
+                                v-model="gender"> Male
                     </label>
                     <label for="female">
                         <input
                                 type="radio"
                                 id="female"
-                                value="Female"> Female
+                                value="Female"
+                                v-model="gender"> Female
                     </label>
                 </div>
             </div>
@@ -113,9 +117,11 @@
                         <p style="white-space: pre-line;">Message: {{ userData.message }} </p>
                         <p><strong>Send Mail?</strong></p>
                         <ul>
-                            <li></li>
+                            <li v-for="(check,index) in checkboxList" :key="index">
+                              {{ check }}
+                            </li>
                         </ul>
-                        <p>Gender:</p>
+                        <p>Gender: {{ gender }}</p>
                         <p>Priority:</p>
                         <p>Switched:</p>
                     </div>
@@ -134,7 +140,9 @@
             password: '',
             age: '',
             message: ''
-          }
+          },
+          checkboxList:[],
+          gender:''
         }
       }
     }
