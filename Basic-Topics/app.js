@@ -6,12 +6,11 @@ new Vue({
        y: 0,
     },
     methods: {
-        getName(){
-            return this.name = 'Rabiul Hasan';
+        updateMobileNumber(event){
+            console.log(event);
         },
-        findMouserMove(event){
-            this.x = event.clientX;
-            this.y = event.clientY;
+        handelForm(){
+            console.log("yes");
         }
     }
 })

@@ -10,14 +10,10 @@
 </head>
 <body>
     <div id="app">
-        <p>{{ name }}</p>
-        <button v-on:click="getName">click me</button>
-
-        <div v-on:mousemove="findMouserMove" class="box">
-            Hover Me
-        </div>
-        <p>{{x}}</p>
-        <p>{{y}}</p>
+        <form v-on:submit.prevent="handelForm">
+            <input type="text" placeholder="mobile number" @change="updateMobileNumber($event)">
+            <button type="submit">Submit</button>
+        </form>
     </div>    
     <!-- Import App.js File -->
     <script src="app.js"></script>
