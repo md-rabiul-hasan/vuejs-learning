@@ -11,5 +11,16 @@ export const store = new Vuex.Store({
             {name: 'Js Book', price: 200},
             {name: 'Data Structure & Algorithm', price: 150},
         ]
+    },
+    getters: {
+        saleBooks: (state) => {
+          let salebook =  state.books.map( (book) => {
+              return {
+                  name: `## ${book.name} ##`,
+                  price: ` ${book.price / 2}`
+              }
+          })
+          return salebook;
+        }
     }   
   })

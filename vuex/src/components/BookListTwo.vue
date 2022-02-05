@@ -2,7 +2,7 @@
   <div id="book-list-two">
         <h2>Book List Two</h2>
         <ul>
-            <li v-for="(book, index) in books" :key="index">
+            <li v-for="(book, index) in salebook" :key="index">
                 <span class="name">{{ book.name }}</span>
                 <span class="price">{{ book.price }} TK</span>
             </li>
@@ -15,6 +15,9 @@ export default {
     computed:{
         books(){
             return this.$store.state.books;
+        },
+        salebook(){
+            return this.$store.getters.saleBooks;
         }
     }
 }
