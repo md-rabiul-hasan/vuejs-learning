@@ -19,7 +19,6 @@ const router = new VueRouter({
       x: 0,
       y: 0
     }
-
   }
 });
 

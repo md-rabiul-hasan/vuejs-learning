@@ -10,7 +10,9 @@
 
 <script>
 export default {
-  
+  beforeRouteEnter (to, from, next) {
+    next(false)
+  }
 }
 </script>
 
