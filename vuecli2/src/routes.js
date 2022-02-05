@@ -1,6 +1,9 @@
 import Home from './Components/Home'
 import About from './Components/About'
-import Customer from './Components/Customer'
+import Customer from './Components/Customer/Customer'
+import CustomerEdit from './Components/Customer/Edit'
+import CustomerDetails from './Components/Customer/Details'
+import CustomerNavbar from './Components/Customer/Navbar'
 
 export const routes = [
     {
@@ -12,7 +15,22 @@ export const routes = [
         component: About
     },
     {
-        path: '/customer/:id',
-        component: Customer
+        path: '/customer',
+        component: Customer,
+        children: [
+            {
+                path: '',
+                component: CustomerNavbar,
+            },
+            {
+                path: ':id/details',
+                component: CustomerDetails,
+            },
+            {
+                path: ':id/edit',
+                component: CustomerEdit,
+                name:'customer_edit'
+            },
+        ]
     }
 ];
