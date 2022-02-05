@@ -6,14 +6,16 @@
 
 <script>
 import Contact from './Components/Contact.vue'
+import Get from './Components/Get.vue'
 export default {
   data(){
     return {
-      componentRender: 'Contact'
+      componentRender: 'Get'
     }
   },
   components:{
-    Contact
+    Contact,
+    Get
   }
 }
 </script>
