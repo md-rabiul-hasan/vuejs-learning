@@ -1,22 +1,23 @@
 <template>
   <div class="container">
-    <component :is="componentRender"></component>
+      <Header />
   </div>
 </template>
 
 <script>
-import Contact from './Components/Contact.vue'
-import Get from './Components/Get.vue'
+import Header from './Components/Header.vue'
 export default {
   data(){
     return {
-      componentRender: 'Get'
+      
     }
   },
   components:{
-    Contact,
-    Get
+    Header
   }
 }
 </script>
 
+<style>
+
+</style>
