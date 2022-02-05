@@ -1,6 +1,7 @@
 <template>
     <div>
         Customer Edit {{ $route.params.id }}
+        {{ $route.query.q }}
     </div>
 </template>
 
