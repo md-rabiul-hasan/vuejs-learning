@@ -4,6 +4,7 @@ import Customer from './Components/Customer/Customer'
 import CustomerEdit from './Components/Customer/Edit'
 import CustomerDetails from './Components/Customer/Details'
 import CustomerNavbar from './Components/Customer/Navbar'
+import NotFoundPage from './Components/NotFoundPage'
 
 export const routes = [
     {
@@ -32,5 +33,9 @@ export const routes = [
                 name:'customer_edit'
             },
         ]
+    },
+    {
+        path: '*',
+        component: NotFoundPage
     }
 ];
