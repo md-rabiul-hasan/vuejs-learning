@@ -1,21 +1,23 @@
 <template>
   <div class="container">
-    <p>{{ name | capitalize }}</p>
+    <Client />
+    <hr>
+    <User />
   </div>
 </template>
 
 <script>
+import Client from './components/Client.vue'
+import User from './components/User.vue'
 export default {
   data(){
     return {
-      name: 'rabiul hasan'
+     
     }
   },
-  filters:{
-    capitalize(value){
-      value = value.toString();
-      return value.charAt(0).toUpperCase() + value.slice(1)
-    }
+  components:{
+    Client,
+    User
   }
 }
 </script>
