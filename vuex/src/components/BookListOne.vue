@@ -4,7 +4,7 @@
       <ul>
           <li v-for="(book, index) in books" :key="index">
               <span class="name">{{ book.name }}</span>
-              <span class="name">$ {{ book.price }}</span>
+              <span class="name">${{ book.price }}</span>
           </li>
         </ul>
   </div>
@@ -12,12 +12,11 @@
 
 <script>
 export default {
-  data(){
-      return {
-
+  computed:{
+      books(){
+          return this.$store.state.books
       }
-  },
-  props: ['books']
+  }
 }
 </script>
 

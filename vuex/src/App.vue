@@ -1,7 +1,7 @@
 <template>
     <div>
-      <BookListOne :books="books"/>
-      <BookListTwo :books="books"/>
+      <BookListOne/>
+      <BookListTwo/>
     </div>
 </template>
 
@@ -11,12 +11,6 @@ import BookListTwo from './components/BookListTwo.vue'
 export default {
     data(){
       return {
-        books: [
-          {name: 'Laravel Book', price: 120},
-          {name: 'Devops Book', price: 100},
-          {name: 'Js Book', price: 200},
-          {name: 'Data Structure & Algorithm', price: 150},
-        ]
       }
     },
     components:{
