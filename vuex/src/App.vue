@@ -2,6 +2,8 @@
     <div>
       <BookListOne/>
       <BookListTwo/>
+
+      <button @click="amountDecrease">Amount Decrease</button>
     </div>
 </template>
 
@@ -16,7 +18,12 @@ export default {
     components:{
       BookListOne,
       BookListTwo
-    }
+    },
+    methods: {
+      amountDecrease(){
+        return this.$store.commit('reducePrice')
+      }
+    },
 }
 </script>
 
