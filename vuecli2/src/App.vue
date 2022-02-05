@@ -1,23 +1,19 @@
 <template>
   <div class="container">
-    <Client />
-    <hr>
-    <User />
+    <component :is="componentRender"></component>
   </div>
 </template>
 
 <script>
-import Client from './components/Client.vue'
-import User from './components/User.vue'
+import Contact from './Components/Contact.vue'
 export default {
   data(){
     return {
-     
+      componentRender: 'Contact'
     }
   },
   components:{
-    Client,
-    User
+    Contact
   }
 }
 </script>
