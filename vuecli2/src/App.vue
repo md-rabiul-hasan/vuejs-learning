@@ -1,17 +1,6 @@
 <template>
   <div class="container">
-    <button @click="display=!display">Toggle</button>
-    <hr>
-    <transition 
-    name="alert-card"
-    enter-active-class="animated fadeInUp"
-    leave-active-class="animated fadeInDown delay-3s"
-    >
-      <div v-if="display" class="alert alert-primary" role="alert">
-        A simple primary alert—check it out!
-      </div>
-    </transition>
-    
+    <p>{{ name | capitalize }}</p>
   </div>
 </template>
 
@@ -19,8 +8,13 @@
 export default {
   data(){
     return {
-      name: 'Rabiul Hasan',
-      display: false
+      name: 'rabiul hasan'
+    }
+  },
+  filters:{
+    capitalize(value){
+      value = value.toString();
+      return value.charAt(0).toUpperCase() + value.slice(1)
     }
   }
 }
