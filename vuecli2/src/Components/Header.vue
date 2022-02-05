@@ -8,12 +8,18 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <router-link class="nav-link" to="/">Home</router-link>
-                </li>
-                <li class="nav-item">
-                   <router-link class="nav-link" to="/about-us">About-Us</router-link>
-                </li>
+                    <li class="nav-item active">
+                        <router-link class="nav-link" to="/">Home</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link" to="/about-us">About-Us</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link" to="/customer/1">Customer-1</router-link>
+                    </li>
+                     <li class="nav-item">
+                        <router-link class="nav-link" to="/customer/2">Customer-2</router-link>
+                    </li>
                 </ul>
             </div>
         </nav>
